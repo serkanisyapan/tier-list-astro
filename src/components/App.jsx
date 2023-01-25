@@ -8,7 +8,7 @@ import {
   useSensors,
 } from "@dnd-kit/core";
 import { sortableKeyboardCoordinates } from "@dnd-kit/sortable";
-import { useTiers } from "../hooks/useTiers.jsx";
+import { useTiers } from "../hooks/useTiers";
 import { TierContentLoader } from "../components/TierContentLoader";
 import Droppable from "./Droppable";
 import Item from "./Item";

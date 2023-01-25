@@ -3,7 +3,7 @@ import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 
 const pageTitle = "Home Page";
-const allTierLists = await Astro.glob("../pages/tierlists/*.mdx");
+const allTierLists = await Astro.glob("../pages/tierlists/*.{md,mdx}");
 ---
 
 <html lang="en">
