@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { arrayMove, moveBetweenContainers } from "../utils/array";
-import initialState from "../data/initialState";
+import { initialState } from "../data/initialState";
 
 export const useTiers = (listName) => {
   const [tiers, setTiers] = useState([]);

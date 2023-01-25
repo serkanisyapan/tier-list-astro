@@ -1,9 +1,9 @@
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 
-import Item from "./Item";
+import { Item } from "./Item";
 
-const SortableItem = ({ id }) => {
+export const SortableItem = ({ id }) => {
   const {
     attributes,
     listeners,
@@ -25,5 +25,3 @@ const SortableItem = ({ id }) => {
     </li>
   );
 };
-
-export default SortableItem;

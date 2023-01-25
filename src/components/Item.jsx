@@ -1,6 +1,6 @@
 import "../styles/Item.css";
 
-const Item = ({ id, dragOverlay }) => {
+export const Item = ({ id, dragOverlay }) => {
   const style = {
     cursor: dragOverlay ? "grabbing" : "grab",
   };
@@ -11,5 +11,3 @@ const Item = ({ id, dragOverlay }) => {
     </div>
   );
 };
-
-export default Item;

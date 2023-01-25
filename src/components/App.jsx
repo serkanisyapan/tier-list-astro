@@ -10,8 +10,8 @@ import {
 import { sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 import { useTiers } from "../hooks/useTiers";
 import { TierContentLoader } from "../components/TierContentLoader";
-import Droppable from "./Droppable";
-import Item from "./Item";
+import { Droppable } from "./Droppable";
+import { Item } from "./Item";
 import "../styles/App.css";
 
 export const App = ({ listName }) => {

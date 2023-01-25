@@ -4,7 +4,7 @@ import tekken7characters from "./tekken7characters.json";
 import boirepbosses from "./boirepbosses.json";
 import btd6towers from "./btd6towers.json";
 
-const initialState = (listName) => {
+export const initialState = (listName) => {
   let firstState = [
     { color: "#FFD700", items: [], tierName: "S", id: 1 },
     { color: "#e8d13c", items: [], tierName: "A", id: 2 },
@@ -55,4 +55,3 @@ const initialState = (listName) => {
   }
   return firstState;
 };
-export default initialState;

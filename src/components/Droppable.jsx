@@ -3,11 +3,11 @@ import { useDroppable } from "@dnd-kit/core";
 import { rectSortingStrategy, SortableContext } from "@dnd-kit/sortable";
 import { createPortal } from "react-dom";
 import { SettingsModal } from "./SettingsModal";
-import SortableItem from "./SortableItem";
+import { SortableItem } from "./SortableItem";
 import "../styles/Droppable.css";
 import { Settings } from "./Settings";
 
-const Droppable = ({
+export const Droppable = ({
   id,
   items,
   handleEdit,
@@ -65,5 +65,3 @@ const Droppable = ({
     </div>
   );
 };
-
-export default Droppable;
