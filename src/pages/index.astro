@@ -9,7 +9,7 @@ const allTierLists = await Astro.glob("../pages/tierlists/*.{md,mdx}");
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="../../public/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
@@ -22,7 +22,8 @@ const allTierLists = await Astro.glob("../pages/tierlists/*.{md,mdx}");
         <p>
           Create your own tier list for any topic and rank them in tiers from
           best to worst. Place same ranked items in the same tier and create
-          your own tier list.
+          your own tier list. You can customize tier names, colors and add or
+          delete tiers!
         </p>
       </section>
       <h2>All Tier Lists</h2>

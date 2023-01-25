@@ -9,7 +9,10 @@ import TwitterIcon from "./TwitterIcon.astro";
     <div class="nav-container">
       <ul>
         <li>
-          <a href="/"><Icon /></a>
+          <a class="logo" href="/"
+            ><Icon />
+            <p>Tier List Maker</p>
+          </a>
         </li>
       </ul>
       <ul class="socials">
@@ -30,7 +33,7 @@ import TwitterIcon from "./TwitterIcon.astro";
 
 <style>
   nav {
-    padding: 10px 2rem;
+    padding: 14px 2rem;
     background-color: rgba(0, 0, 0, 0.81);
   }
   .nav-container {
@@ -52,5 +55,13 @@ import TwitterIcon from "./TwitterIcon.astro";
   .socials {
     display: flex;
     gap: 20px;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    color: white;
   }
 </style>

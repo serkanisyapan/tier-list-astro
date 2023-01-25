@@ -6,12 +6,12 @@ import btd6towers from "./btd6towers.json";
 
 export const initialState = (listName) => {
   let firstState = [
-    { color: "#FFD700", items: [], tierName: "S", id: 1 },
-    { color: "#e8d13c", items: [], tierName: "A", id: 2 },
-    { color: "#C0C0C0", items: [], tierName: "B", id: 3 },
-    { color: "#9C9C9C", items: [], tierName: "C", id: 4 },
-    { color: "#CD7F32", items: [], tierName: "D", id: 5 },
-    { color: "#B87333", items: [], tierName: "F", id: 6 },
+    { color: "#48cb7a", items: [], tierName: "S", id: 1 },
+    { color: "#63d981", items: [], tierName: "A", id: 2 },
+    { color: "#7675b3", items: [], tierName: "B", id: 3 },
+    { color: "#719fd0", items: [], tierName: "C", id: 4 },
+    { color: "#d846ec", items: [], tierName: "D", id: 5 },
+    { color: "#d56dcc", items: [], tierName: "F", id: 6 },
   ];
   if (listName === "smashcharacters") {
     firstState.push({
