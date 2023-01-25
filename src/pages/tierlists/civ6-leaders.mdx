@@ -1,0 +1,13 @@
+---
+layout: "../../layouts/BaseLayout.astro"
+listName: "civ6leaders"
+title: "Civ 6 Leaders"
+tierImage: "../../../assets/civ6leaders.png"
+imageAlt: "civ 6 leaders"
+---
+
+import { App } from "../../components/App.jsx";
+
+<div>
+  <App listName={frontmatter.listName} client:load />
+</div>
