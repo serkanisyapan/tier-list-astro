@@ -8,13 +8,13 @@ import {
   useSensors,
 } from "@dnd-kit/core";
 import { sortableKeyboardCoordinates } from "@dnd-kit/sortable";
-import { useTiers } from "../hooks/useTiers";
+import { useTiers } from "../hooks/useTiers.jsx";
 import { TierContentLoader } from "../components/TierContentLoader";
 import Droppable from "./Droppable";
 import Item from "./Item";
 import "../styles/App.css";
 
-function App({ listName }) {
+export const App = ({ listName }) => {
   const {
     tiers,
     activeId,
@@ -79,6 +79,4 @@ function App({ listName }) {
   }
 
   return <>{tierContent}</>;
-}
-
-export default App;
+};
