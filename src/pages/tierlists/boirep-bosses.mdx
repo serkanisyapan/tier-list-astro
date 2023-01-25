@@ -1,0 +1,11 @@
+---
+layout: ../../layouts/BaseLayout.astro
+listName: "boirepbosses"
+title: "BoI Repentance Bosses"
+tierImage: "../../../assets/boibosses.png"
+imageAlt: "boi rep bosses"
+---
+
+import App from "../../components/App.jsx";
+
+<App listName={frontmatter.listName} client:load />

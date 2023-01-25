@@ -1,0 +1,30 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 73%;
+  margin: 100px auto;
+}
+
+.container > * {
+  margin: 5px;
+}
+
+.reset-all-button {
+  border: none;
+  color: white;
+  background-color: #af4c4c;
+  padding: 10px 45px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 3px;
+  font-size: 20px;
+  cursor: pointer;
+  width: 30%;
+}
+
+@media screen and (max-width: 600px) {
+  .reset-all-button {
+    padding: 10px;
+    width: 60%;
+  }
+}

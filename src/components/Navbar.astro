@@ -1,0 +1,56 @@
+---
+import GithubIcon from "./GithubIcon.astro";
+import Icon from "./Icon.astro";
+import TwitterIcon from "./TwitterIcon.astro";
+---
+
+<header>
+  <nav>
+    <div class="nav-container">
+      <ul>
+        <li>
+          <a href="/"><Icon /></a>
+        </li>
+      </ul>
+      <ul class="socials">
+        <li>
+          <a href="https://github.com/serkanisyapan/tier-list" target="_blank"
+            ><GithubIcon /></a
+          >
+        </li>
+        <li>
+          <a href="https://twitter.com/isyapan_serkan" target="_blank"
+            ><TwitterIcon /></a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>;
+
+<style>
+  nav {
+    padding: 10px 2rem;
+    background-color: rgba(0, 0, 0, 0.81);
+  }
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+  }
+  li {
+    list-style: none;
+  }
+  .socials {
+    display: flex;
+    gap: 20px;
+  }
+</style>

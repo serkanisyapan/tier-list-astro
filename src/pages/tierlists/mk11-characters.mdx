@@ -1,0 +1,11 @@
+---
+layout: ../../layouts/BaseLayout.astro
+listName: "mk11characters"
+title: "Mortal Kombat 11 Characters"
+tierImage: "../../../assets/mk11list.png"
+imageAlt: "mortal kombat 11 characters"
+---
+
+import App from "../../components/App.jsx";
+
+<App listName={frontmatter.listName} client:load />

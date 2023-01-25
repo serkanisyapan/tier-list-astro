@@ -1,0 +1,11 @@
+---
+layout: ../../layouts/BaseLayout.astro
+listName: "tekken7characters"
+title: "Tekken 7 Characters"
+tierImage: "../../assets/tekkenlist.png"
+imageAlt: "tekken 7 characters"
+---
+
+import App from "../../components/App.jsx";
+
+<App listName={frontmatter.listName} client:load />

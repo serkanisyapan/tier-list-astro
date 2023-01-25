@@ -1,0 +1,11 @@
+---
+layout: ../../layouts/BaseLayout.astro
+listName: "smashcharacters"
+title: "Smash Bros Ultimate Characters"
+tierImage: "../../../assets/smashlist.png"
+imageAlt: "smash bros ultimate characters"
+---
+
+import App from "../../components/App.jsx";
+
+<App listName={frontmatter.listName} client:load />

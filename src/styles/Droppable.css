@@ -1,0 +1,57 @@
+.droppable {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100%;
+  list-style-type: none;
+  padding: 5px;
+  background-color: rgba(39, 39, 39, 0.831);
+  border: 1px solid black;
+}
+.unranked-droppable {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100%;
+  list-style-type: none;
+  padding: 5px;
+  background-color: rgba(39, 39, 39, 0.831);
+  border: 1px solid black;
+}
+
+.droppable-container {
+  display: flex;
+  min-height: 92px;
+}
+.unranked-tier {
+  display: flex;
+  min-height: 92px;
+  margin: 30px 0;
+}
+
+.tier-names {
+  box-sizing: border-box;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  text-align: center;
+  word-break: break-all;
+}
+
+@media screen and (max-width: 992px) {
+  .droppable {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .unranked-droppable {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .droppable {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .unranked-droppable {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

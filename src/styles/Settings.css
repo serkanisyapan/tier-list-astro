@@ -1,0 +1,19 @@
+.settings {
+  background-color: rgba(0, 0, 0, 0.856);
+  width: 50px;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  flex-shrink: unset;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.settings img:hover {
+  cursor: pointer;
+}
+
+.arrows:hover {
+  cursor: pointer;
+}

@@ -1,0 +1,90 @@
+---
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+
+const pageTitle = "Home Page";
+const allTierLists = await Astro.glob("../pages/tierlists/*.mdx");
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Navbar />
+    <main class="home-main-container">
+      <section class="main-para">
+        <h1 class="main-text">Create a Tier List for Any Topic</h1>
+        <p>
+          Create your own tier list for any topic and rank them in tiers from
+          best to worst. Place same ranked items in the same tier and create
+          your own tier list.
+        </p>
+      </section>
+      <h2>All Tier Lists</h2>
+      <div class="all-tiers">
+        {
+          allTierLists.map((tierList) => (
+            <div class="tier-card">
+              <a href={tierList.url}>
+                <img
+                  src={tierList.frontmatter.tierImage}
+                  alt={tierList.frontmatter.imageAlt}
+                />
+                <p>{tierList.frontmatter.title}</p>
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .home-main-container {
+    max-width: 73%;
+    margin: 0 auto;
+  }
+  .main-para {
+    margin: 40px 0;
+    max-width: 50%;
+  }
+  .main-text {
+    margin-bottom: 15px;
+  }
+  .all-tiers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+  }
+  .tier-card {
+    background-color: black;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+  }
+  .tier-card img {
+    width: 300px;
+    height: 160px;
+  }
+  .tier-card p {
+    padding: 5px;
+    color: white;
+  }
+  .tier-card:hover {
+    transform: scale(1.1);
+  }
+  .tier-card a {
+    text-decoration: none;
+    text-align: center;
+  }
+</style>
