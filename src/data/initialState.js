@@ -4,6 +4,7 @@ import tekken7characters from "./tekken7characters.json";
 import boirepbosses from "./boirepbosses.json";
 import btd6towers from "./btd6towers.json";
 import civ6leaders from "./civ6leaders.json";
+import cupheadbosses from "./cupheadbosses.json";
 
 export const initialState = (listName) => {
   let firstState = [
@@ -59,6 +60,14 @@ export const initialState = (listName) => {
       color: "#8ef1c2",
       tierName: "Unranked",
       items: civ6leaders,
+      id: 7,
+    });
+  }
+  if (listName === "cupheadbosses") {
+    firstState.push({
+      color: "#8ef1c2",
+      tierName: "Unranked",
+      items: cupheadbosses,
       id: 7,
     });
   }

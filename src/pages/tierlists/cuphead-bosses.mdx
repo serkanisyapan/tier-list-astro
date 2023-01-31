@@ -1,0 +1,13 @@
+---
+layout: "../../layouts/BaseLayout.astro"
+listName: "cupheadbosses"
+title: "Cuphead Bosses"
+tierImage: "../../../assets/cupheadbosses.png"
+imageAlt: "cuphead bosses"
+---
+
+import { App } from "../../components/App.jsx";
+
+<div>
+  <App listName={frontmatter.listName} client:load />
+</div>
