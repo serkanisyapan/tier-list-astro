@@ -30,15 +30,15 @@ const allTierLists = await Astro.glob("../pages/tierlists/*.{md,mdx}");
       <div class="all-tiers">
         {
           allTierLists.map((tierList) => (
-            <div class="tier-card">
-              <a href={tierList.url}>
+            <a class="tier-card" href={tierList.url}>
+              <figure>
                 <img
                   src={tierList.frontmatter.tierImage}
                   alt={tierList.frontmatter.imageAlt}
                 />
-                <p>{tierList.frontmatter.title}</p>
-              </a>
-            </div>
+                <figcaption>{tierList.frontmatter.title}</figcaption>
+              </figure>
+            </a>
           ))
         }
       </div>
@@ -77,8 +77,9 @@ const allTierLists = await Astro.glob("../pages/tierlists/*.{md,mdx}");
     width: 300px;
     height: 160px;
   }
-  .tier-card p {
+  .tier-card figcaption {
     padding: 5px;
+    text-align: center;
     color: white;
   }
   .tier-card:hover {
@@ -104,3 +105,9 @@ const allTierLists = await Astro.glob("../pages/tierlists/*.{md,mdx}");
     }
   }
 </style>
+
+<!-- <img
+                  src={tierList.frontmatter.tierImage}
+                  alt={tierList.frontmatter.imageAlt}
+                />
+                <p>{tierList.frontmatter.title}</p> -->

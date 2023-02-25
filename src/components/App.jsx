@@ -27,6 +27,7 @@ export const App = ({ listName }) => {
     handleReorder,
     handleResetTiers,
   } = useTiers(listName);
+
   const sensors = useSensors(
     useSensor(MouseSensor),
     useSensor(TouchSensor),
@@ -54,7 +55,7 @@ export const App = ({ listName }) => {
           onDragOver={handleDragOver}
           onDragEnd={handleDragEnd}
         >
-          <div ref={parent} className="main-container">
+          <div className="main-container">
             {tiers.map((group) => (
               <Droppable
                 id={group.id}

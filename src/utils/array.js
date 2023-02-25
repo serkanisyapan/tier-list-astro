@@ -26,14 +26,14 @@ const moveBetweenContainers = (
         ...item,
         items: removeAtIndex(item.items, activeIndex),
       };
-    } else if (overContainer === item.id) {
+    }
+    if (overContainer === item.id) {
       return {
         ...item,
         items: insertAtIndex(item.items, overIndex, activeItemID),
       };
-    } else {
-      return item;
     }
+    return item;
   });
 };
 
