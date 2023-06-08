@@ -71,7 +71,10 @@ export const SettingsModal = ({
           </button>
         </div>
         <button
-          onClick={() => handleEdit(item.id, tierColor, tierName)}
+          onClick={() => {
+            handleEdit(item.id, tierColor, tierName)
+            handleShowModal(false)
+          }}
           className="button save-button"
         >
           Save Changes
