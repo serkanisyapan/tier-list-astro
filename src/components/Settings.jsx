@@ -11,6 +11,8 @@ export const Settings = ({ items, handleReorder, handleShowModal }) => {
         onClick={handleShowModal}
         src={settingsButton}
         alt="change tier settings"
+        width={32}
+        height={32}
       />
       <span onClick={() => handleReorder(items, "goDown")} className="arrows">
         <DownArrow size="16px" />

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { UpArrow, DownArrow } from "./ArrowIcons";
 import "../styles/SettingsModal.css";
 
 export const SettingsModal = ({
@@ -18,7 +17,7 @@ export const SettingsModal = ({
         <span className="modal-text">Change Tier Settings</span>
         <div className="input-section">
           <div className="section">
-            <label htmlFor="tier-color">Tier Color</label>
+            <label htmlFor="tier-color">Tier color</label>
             <input
               type="color"
               id="tier-color"
@@ -27,7 +26,7 @@ export const SettingsModal = ({
             />
           </div>
           <div className="section">
-            <label htmlFor="tier-name">Tier Name</label>
+            <label htmlFor="tier-name">Tier name</label>
             <input
               type="text"
               id="tier-name"
@@ -41,13 +40,13 @@ export const SettingsModal = ({
             onClick={() => handleChangeOnTier(item, "delete")}
             className="button delete-button"
           >
-            Delete Tier
+            Delete tier
           </button>
           <button
             onClick={() => handleChangeOnTier(item, "removeItems")}
             className="button remove-items-button"
           >
-            Clear Tier Images
+            Clear tier images
           </button>
         </div>
         <div className="buttons-section">
@@ -55,29 +54,23 @@ export const SettingsModal = ({
             onClick={() => handleAddTier(item, 0)}
             className="button add-button"
           >
-            Add Tier{" "}
-            <span>
-              <UpArrow size="16" />
-            </span>
+            Add a tier above
           </button>
           <button
             onClick={() => handleAddTier(item, 1)}
             className="button add-button"
           >
-            Add Tier
-            <span>
-              <DownArrow size="16" />
-            </span>
+            Add a tier below
           </button>
         </div>
         <button
           onClick={() => {
-            handleEdit(item.id, tierColor, tierName)
-            handleShowModal(false)
+            handleEdit(item.id, tierColor, tierName);
+            handleShowModal(false);
           }}
           className="button save-button"
         >
-          Save Changes
+          Save changes
         </button>
       </div>
     </>

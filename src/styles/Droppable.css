@@ -13,8 +13,6 @@
   width: 100%;
   list-style-type: none;
   padding: 5px;
-  background-color: rgba(39, 39, 39, 0.831);
-  border: 1px solid black;
 }
 
 .droppable-container {
