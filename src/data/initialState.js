@@ -5,6 +5,7 @@ import boirepbosses from "./boirepbosses.json";
 import btd6towers from "./btd6towers.json";
 import civ6leaders from "./civ6leaders.json";
 import cupheadbosses from "./cupheadbosses.json";
+import tekken8characters from "./tekken8characters.json";
 
 export const initialState = (listName) => {
   let firstState = [
@@ -15,61 +16,45 @@ export const initialState = (listName) => {
     { color: "#d846ec", items: [], tierName: "D", id: 5 },
     { color: "#d56dcc", items: [], tierName: "F", id: 6 },
   ];
-  if (listName === "smashcharacters") {
-    firstState.push({
-      color: "#8ef1c2",
-      tierName: "Unranked",
-      items: smashcharacters,
-      id: 7,
-    });
+  let newData = {
+    color: "#8ef1c2",
+    tierName: "Unranked",
+    items: null,
+    id: 7,
+  };
+
+  switch (listName) {
+    case "smashcharacters":
+      newData.items = smashcharacters;
+      break;
+    case "tekken7characters":
+      newData.items = tekken7characters;
+      break;
+    case "mk11characters":
+      newData.items = mk11characters;
+      break;
+    case "boirepbosses":
+      newData.items = boirepbosses;
+      break;
+    case "btd6towers":
+      newData.items = btd6towers;
+      break;
+    case "civ6leaders":
+      newData.items = civ6leaders;
+      break;
+    case "cupheadbosses":
+      newData.items = cupheadbosses;
+      break;
+    case "tekken8characters":
+      newData.items = tekken8characters;
+      break;
+    default:
+      break;
   }
-  if (listName === "tekken7characters") {
-    firstState.push({
-      color: "#8ef1c2",
-      tierName: "Unranked",
-      items: tekken7characters,
-      id: 7,
-    });
+
+  if (newData.items) {
+    firstState.push(newData);
   }
-  if (listName === "mk11characters") {
-    firstState.push({
-      color: "#8ef1c2",
-      tierName: "Unranked",
-      items: mk11characters,
-      id: 7,
-    });
-  }
-  if (listName === "boirepbosses") {
-    firstState.push({
-      color: "#8ef1c2",
-      tierName: "Unranked",
-      items: boirepbosses,
-      id: 7,
-    });
-  }
-  if (listName === "btd6towers") {
-    firstState.push({
-      color: "#8ef1c2",
-      tierName: "Unranked",
-      items: btd6towers,
-      id: 7,
-    });
-  }
-  if (listName === "civ6leaders") {
-    firstState.push({
-      color: "#8ef1c2",
-      tierName: "Unranked",
-      items: civ6leaders,
-      id: 7,
-    });
-  }
-  if (listName === "cupheadbosses") {
-    firstState.push({
-      color: "#8ef1c2",
-      tierName: "Unranked",
-      items: cupheadbosses,
-      id: 7,
-    });
-  }
+
   return firstState;
 };
