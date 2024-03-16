@@ -1,7 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
-const { frontmatter } = Astro.props;
+const { title } = Astro.props.frontmatter || Astro.props;
 import "../styles/index.css";
 ---
 
@@ -11,7 +11,7 @@ import "../styles/index.css";
     <link rel="icon" type="image/svg+xml" href="../../public/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{frontmatter.title}</title>
+    <title>{title}</title>
   </head>
   <body><Navbar /><slot /><Footer /></body>
 </html>
