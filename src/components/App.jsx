@@ -13,7 +13,7 @@ import { Droppable } from "./Droppable";
 import { Item } from "./Item";
 import "../styles/App.css";
 
-export const App = ({ listName }) => {
+export const App = ({ listName, title }) => {
   const {
     tiers,
     activeId,
@@ -56,6 +56,7 @@ export const App = ({ listName }) => {
           onDragEnd={handleDragEnd}
         >
           <div className="main-container">
+            <h1>{title} Tier List</h1>
             {tiers.map((group) => (
               <Droppable
                 id={group.id}

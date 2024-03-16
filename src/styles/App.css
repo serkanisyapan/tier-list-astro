@@ -5,6 +5,11 @@
   margin: 100px auto;
 }
 
+.main-container h1 {
+  color: white;
+  margin-bottom: 20px;
+}
+
 .container > * {
   margin: 5px;
 }
